@@ -46,3 +46,16 @@ void displayCanvas()
 
     printf("\n");
 }
+void drawHorizontalLine(int row, int startCol, int endCol)
+{
+    int i;
+
+    if(row < 0 || row >= ROWS)
+        return;
+
+    for(i = startCol; i <= endCol && i < COLS; i++)
+    {
+        if(i >= 0)
+            canvas[row][i] = '*';
+    }
+}
