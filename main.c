@@ -1,5 +1,11 @@
 #include <stdio.h>
-int main(){
-    printf("Hello World");
+#include "graphics.h"
+
+int main()
+{
+    initializeCanvas();
+
+    displayCanvas();
+
     return 0;
 }
