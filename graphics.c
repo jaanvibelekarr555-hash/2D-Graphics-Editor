@@ -80,3 +80,18 @@ void drawRectangle(int startRow, int startCol, int endRow, int endCol)
     drawVerticalLine(startCol, startRow, endRow);
     drawVerticalLine(endCol, startRow, endRow);
 }
+void drawTriangle(int row, int col, int height)
+{
+    int i, j;
+
+    for(i = 0; i < height; i++)
+    {
+        for(j = col - i; j <= col + i; j++)
+        {
+            if(row + i < ROWS && j >= 0 && j < COLS)
+            {
+                canvas[row + i][j] = '*';
+            }
+        }
+    }
+}

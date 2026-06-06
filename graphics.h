@@ -9,4 +9,5 @@ void displayCanvas();
 void drawHorizontalLine(int row, int startCol, int endCol);
 void drawVerticalLine(int col, int startRow, int endRow);
 void drawRectangle(int startRow, int startCol, int endRow, int endCol);
+void drawTriangle(int row, int col, int height);
 #endif
