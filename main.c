@@ -5,51 +5,68 @@ int main()
 {
     int choice;
     int row, startCol, endCol;
-
+    int col, startRow, endRow;
     initializeCanvas();
 
-    while(1)
+    while (1)
     {
         printf("\n===== 2D Graphics Editor =====\n");
         printf("1. Display Canvas\n");
         printf("2. Draw Horizontal Line\n");
+        printf("3. Draw Vertical Line\n");
         printf("3. Exit\n");
         printf("Enter choice: ");
 
-        if(scanf("%d", &choice) != 1)
+        if (scanf("%d", &choice) != 1)
         {
             printf("Please enter a valid number!\n");
-            while(getchar() != '\n');
+            while (getchar() != '\n')
+                ;
             continue;
         }
 
-        switch(choice)
+        switch (choice)
         {
-            case 1:
-                displayCanvas();
-                break;
+        case 1:
+            displayCanvas();
+            break;
 
-            case 2:
-                printf("Enter row: ");
-                scanf("%d", &row);
+        case 2:
+            printf("Enter row: ");
+            scanf("%d", &row);
 
-                printf("Enter start column: ");
-                scanf("%d", &startCol);
+            printf("Enter start column: ");
+            scanf("%d", &startCol);
 
-                printf("Enter end column: ");
-                scanf("%d", &endCol);
+            printf("Enter end column: ");
+            scanf("%d", &endCol);
 
-                drawHorizontalLine(row, startCol, endCol);
+            drawHorizontalLine(row, startCol, endCol);
 
-                printf("Line Drawn Successfully!\n");
-                break;
+            printf("Line Drawn Successfully!\n");
+            break;
 
-            case 3:
-                printf("Exiting program...\n");
-                return 0;
+        case 3:
+            printf("Enter column: ");
+            scanf("%d", &col);
 
-            default:
-                printf("Invalid Choice!\n");
+            printf("Enter start row: ");
+            scanf("%d", &startRow);
+
+            printf("Enter end row: ");
+            scanf("%d", &endRow);
+
+            drawVerticalLine(col, startRow, endRow);
+
+            printf("Vertical Line Drawn Successfully!\n");
+            break;
+
+        case 4:
+            printf("Exiting program...\n");
+            return 0;
+
+        default:
+            printf("Invalid Choice!\n");
         }
     }
 

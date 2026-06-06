@@ -7,4 +7,5 @@
 void initializeCanvas();
 void displayCanvas();
 void drawHorizontalLine(int row, int startCol, int endCol);
+void drawVerticalLine(int col, int startRow, int endRow);
 #endif

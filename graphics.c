@@ -59,3 +59,16 @@ void drawHorizontalLine(int row, int startCol, int endCol)
             canvas[row][i] = '*';
     }
 }
+void drawVerticalLine(int col, int startRow, int endRow)
+{
+    int i;
+
+    if(col < 0 || col >= COLS)
+        return;
+
+    for(i = startRow; i <= endRow && i < ROWS; i++)
+    {
+        if(i >= 0)
+            canvas[i][col] = '*';
+    }
+}
