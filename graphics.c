@@ -72,3 +72,11 @@ void drawVerticalLine(int col, int startRow, int endRow)
             canvas[i][col] = '*';
     }
 }
+void drawRectangle(int startRow, int startCol, int endRow, int endCol)
+{
+    drawHorizontalLine(startRow, startCol, endCol);
+    drawHorizontalLine(endRow, startCol, endCol);
+
+    drawVerticalLine(startCol, startRow, endRow);
+    drawVerticalLine(endCol, startRow, endRow);
+}

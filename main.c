@@ -6,6 +6,8 @@ int main()
     int choice;
     int row, startCol, endCol;
     int col, startRow, endRow;
+    int rectStartRow, rectStartCol;
+    int rectEndRow, rectEndCol;
     initializeCanvas();
 
     while (1)
@@ -14,6 +16,7 @@ int main()
         printf("1. Display Canvas\n");
         printf("2. Draw Horizontal Line\n");
         printf("3. Draw Vertical Line\n");
+        printf("4. Draw Rectangle\n");
         printf("3. Exit\n");
         printf("Enter choice: ");
 
@@ -60,8 +63,29 @@ int main()
 
             printf("Vertical Line Drawn Successfully!\n");
             break;
-
         case 4:
+
+            printf("Enter start row: ");
+            scanf("%d", &rectStartRow);
+
+            printf("Enter start column: ");
+            scanf("%d", &rectStartCol);
+
+            printf("Enter end row: ");
+            scanf("%d", &rectEndRow);
+
+            printf("Enter end column: ");
+            scanf("%d", &rectEndCol);
+
+            drawRectangle(
+                rectStartRow,
+                rectStartCol,
+                rectEndRow,
+                rectEndCol);
+
+            printf("Rectangle Drawn Successfully!\n");
+            break;
+        case 5:
             printf("Exiting program...\n");
             return 0;
 
