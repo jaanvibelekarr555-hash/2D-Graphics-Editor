@@ -95,3 +95,25 @@ void drawTriangle(int row, int col, int height)
         }
     }
 }
+void drawCircle(int centerRow, int centerCol, int radius)
+{
+    int row, col;
+
+    for(row = 0; row < ROWS; row++)
+    {
+        for(col = 0; col < COLS; col++)
+        {
+            int dx = row - centerRow;
+            int dy = col - centerCol;
+
+            int distanceSquared = dx * dx + dy * dy;
+            int radiusSquared = radius * radius;
+
+            if(distanceSquared >= radiusSquared - radius &&
+               distanceSquared <= radiusSquared + radius)
+            {
+                canvas[row][col] = '*';
+            }
+        }
+    }
+}

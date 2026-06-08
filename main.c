@@ -9,6 +9,7 @@ int main()
     int rectStartRow, rectStartCol;
     int rectEndRow, rectEndCol;
     int triRow, triCol, triHeight;
+    int circleRow, circleCol, radius;
     initializeCanvas();
 
     while (1)
@@ -19,7 +20,8 @@ int main()
         printf("3. Draw Vertical Line\n");
         printf("4. Draw Rectangle\n");
         printf("5. Draw Triangle\n");
-        printf("3. Exit\n");
+        printf("6. Draw Circle\n");
+        printf("7. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -50,7 +52,6 @@ int main()
 
             printf("Line Drawn Successfully!\n");
             break;
-
         case 3:
             printf("Enter column: ");
             scanf("%d", &col);
@@ -103,6 +104,21 @@ int main()
             printf("Triangle Drawn Successfully!\n");
             break;
         case 6:
+
+            printf("Enter center row: ");
+            scanf("%d", &circleRow);
+
+            printf("Enter center column: ");
+            scanf("%d", &circleCol);
+
+            printf("Enter radius: ");
+            scanf("%d", &radius);
+
+            drawCircle(circleRow, circleCol, radius);
+
+            printf("Circle Drawn Successfully!\n");
+            break;
+        case 7:
             printf("Exiting program...\n");
             return 0;
 
