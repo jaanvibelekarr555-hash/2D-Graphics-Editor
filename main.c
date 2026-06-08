@@ -21,7 +21,8 @@ int main()
         printf("4. Draw Rectangle\n");
         printf("5. Draw Triangle\n");
         printf("6. Draw Circle\n");
-        printf("7. Exit\n");
+        printf("7. Clear Canvas\n");
+        printf("8. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -119,6 +120,12 @@ int main()
             printf("Circle Drawn Successfully!\n");
             break;
         case 7:
+
+            clearCanvas();
+
+            printf("Canvas Cleared Successfully!\n");
+            break;
+        case 8:
             printf("Exiting program...\n");
             return 0;
 

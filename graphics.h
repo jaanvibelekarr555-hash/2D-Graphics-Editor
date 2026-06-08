@@ -11,4 +11,5 @@ void drawVerticalLine(int col, int startRow, int endRow);
 void drawRectangle(int startRow, int startCol, int endRow, int endCol);
 void drawTriangle(int row, int col, int height);
 void drawCircle(int centerRow, int centerCol, int radius);
+void clearCanvas();
 #endif
