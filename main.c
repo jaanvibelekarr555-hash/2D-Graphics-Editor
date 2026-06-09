@@ -25,7 +25,8 @@ int main()
         printf("8. Save Canvas\n");
         printf("9. Load Canvas\n");
         printf("10. Draw Text\n");
-        printf("11. Exit\n");
+        printf("11. undo last action\n");
+        printf("12. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -176,6 +177,10 @@ int main()
             break;
         }
         case 11:
+          undoLastAction();
+          displayCanvas();
+          break;
+        case 12:
             printf("Exiting program...\n");
             return 0;
 

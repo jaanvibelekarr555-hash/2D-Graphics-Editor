@@ -2,6 +2,7 @@
 #include "graphics.h"
 
 char canvas[ROWS][COLS];
+char backupCanvas[ROWS][COLS];
 
 void initializeCanvas()
 {
@@ -185,4 +186,30 @@ void drawText(int row, int col, char text[])
         canvas[row][col + i] = text[i];
         i++;
     }
+}
+void saveState()
+{
+    int i, j;
+
+    for(i = 0; i < ROWS; i++)
+    {
+        for(j = 0; j < COLS; j++)
+        {
+            backupCanvas[i][j] = canvas[i][j];
+        }
+    }
+}
+void undoLastAction()
+{
+    int i, j;
+
+    for(i = 0; i < ROWS; i++)
+    {
+        for(j = 0; j < COLS; j++)
+        {
+            canvas[i][j] = backupCanvas[i][j];
+        }
+    }
+
+    printf("Undo successful!\n");
 }
