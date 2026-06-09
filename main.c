@@ -10,6 +10,8 @@ int main()
     int rectEndRow, rectEndCol;
     int triRow, triCol, triHeight;
     int circleRow, circleCol, radius;
+    int newStartRow, newStartCol;
+    int newEndRow, newEndCol;
     initializeCanvas();
 
     while (1)
@@ -27,7 +29,8 @@ int main()
         printf("10. Draw Text\n");
         printf("11. undo last action\n");
         printf("12. Delete Rectangle\n");
-        printf("13. Exit\n");
+        printf("13. modify Rectangle\n");
+        printf("14. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -205,6 +208,45 @@ int main()
 
             break;
         case 13:
+
+            printf("Enter OLD start row: ");
+            scanf("%d", &rectStartRow);
+
+            printf("Enter OLD start column: ");
+            scanf("%d", &rectStartCol);
+
+            printf("Enter OLD end row: ");
+            scanf("%d", &rectEndRow);
+
+            printf("Enter OLD end column: ");
+            scanf("%d", &rectEndCol);
+
+            printf("Enter NEW start row: ");
+            scanf("%d", &newStartRow);
+
+            printf("Enter NEW start column: ");
+            scanf("%d", &newStartCol);
+
+            printf("Enter NEW end row: ");
+            scanf("%d", &newEndRow);
+
+            printf("Enter NEW end column: ");
+            scanf("%d", &newEndCol);
+
+            modifyRectangle(
+                rectStartRow,
+                rectStartCol,
+                rectEndRow,
+                rectEndCol,
+                newStartRow,
+                newStartCol,
+                newEndRow,
+                newEndCol);
+
+            displayCanvas();
+
+            break;
+        case 14:
             printf("Exiting program...\n");
             return 0;
 

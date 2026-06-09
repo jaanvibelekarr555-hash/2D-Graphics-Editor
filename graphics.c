@@ -230,3 +230,27 @@ void deleteRectangle(int startRow, int startCol, int endRow, int endCol)
 
     printf("Rectangle Deleted Successfully!\n");
 }
+void modifyRectangle(
+    int oldStartRow,
+    int oldStartCol,
+    int oldEndRow,
+    int oldEndCol,
+    int newStartRow,
+    int newStartCol,
+    int newEndRow,
+    int newEndCol)
+{
+    deleteRectangle(
+        oldStartRow,
+        oldStartCol,
+        oldEndRow,
+        oldEndCol);
+
+    drawRectangle(
+        newStartRow,
+        newStartCol,
+        newEndRow,
+        newEndCol);
+
+    printf("Rectangle Modified Successfully!\n");
+}

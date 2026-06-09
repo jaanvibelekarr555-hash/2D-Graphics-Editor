@@ -18,4 +18,13 @@ void drawText(int row, int col, char text[]);
 void saveState();
 void undoLastAction();
 void deleteRectangle(int startRow, int startCol, int endRow, int endCol);
+void modifyRectangle(
+    int oldStartRow,
+    int oldStartCol,
+    int oldEndRow,
+    int oldEndCol,
+    int newStartRow,
+    int newStartCol,
+    int newEndRow,
+    int newEndCol);
 #endif
