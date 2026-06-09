@@ -23,7 +23,8 @@ int main()
         printf("6. Draw Circle\n");
         printf("7. Clear Canvas\n");
         printf("8. Save Canvas\n");
-        printf("9. Exit\n");
+        printf("9. Load Canvas\n");
+        printf("10. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -128,7 +129,7 @@ int main()
             printf("Canvas Cleared Successfully!\n");
             break;
         case 8:
-{
+        {
             char filename[50];
 
             printf("Enter file name: ");
@@ -137,8 +138,21 @@ int main()
             saveCanvasToFile(filename);
 
             break;
-}
+        }
         case 9:
+        {
+            char filename[50];
+
+            printf("Enter file name: ");
+            scanf("%s", filename);
+
+            loadCanvasFromFile(filename);
+
+            displayCanvas();
+
+            break;
+        }
+        case 10:
             printf("Exiting program...\n");
             return 0;
 

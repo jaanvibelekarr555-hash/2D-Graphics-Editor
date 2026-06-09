@@ -13,4 +13,5 @@ void drawTriangle(int row, int col, int height);
 void drawCircle(int centerRow, int centerCol, int radius);
 void clearCanvas();
 void saveCanvasToFile(char filename[]);
+void loadCanvasFromFile(char filename[]);
 #endif

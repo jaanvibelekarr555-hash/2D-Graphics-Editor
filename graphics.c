@@ -152,3 +152,27 @@ void saveCanvasToFile(char filename[])
 
     printf("Canvas saved successfully!\n");
 }
+void loadCanvasFromFile(char filename[])
+{
+    FILE *fp = fopen(filename, "r");
+
+    if(fp == NULL)
+    {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    for(int i = 0; i < ROWS; i++)
+    {
+        for(int j = 0; j < COLS; j++)
+        {
+            canvas[i][j] = fgetc(fp);
+        }
+
+        fgetc(fp); // consume newline
+    }
+
+    fclose(fp);
+
+    printf("Canvas loaded successfully!\n");
+}
