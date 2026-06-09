@@ -24,7 +24,8 @@ int main()
         printf("7. Clear Canvas\n");
         printf("8. Save Canvas\n");
         printf("9. Load Canvas\n");
-        printf("10. Exit\n");
+        printf("10. Draw Text\n");
+        printf("11. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -153,6 +154,28 @@ int main()
             break;
         }
         case 10:
+        {
+            int row, col;
+            char text[100];
+
+            printf("Enter row: ");
+            scanf("%d", &row);
+
+            printf("Enter column: ");
+            scanf("%d", &col);
+
+            getchar();
+
+            printf("Enter text: ");
+            fgets(text, sizeof(text), stdin);
+
+            drawText(row, col, text);
+
+            displayCanvas();
+
+            break;
+        }
+        case 11:
             printf("Exiting program...\n");
             return 0;
 

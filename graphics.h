@@ -14,4 +14,5 @@ void drawCircle(int centerRow, int centerCol, int radius);
 void clearCanvas();
 void saveCanvasToFile(char filename[]);
 void loadCanvasFromFile(char filename[]);
+void drawText(int row, int col, char text[]);
 #endif

@@ -176,3 +176,13 @@ void loadCanvasFromFile(char filename[])
 
     printf("Canvas loaded successfully!\n");
 }
+void drawText(int row, int col, char text[])
+{
+    int i = 0;
+
+    while(text[i] != '\0' && (col + i) < COLS)
+    {
+        canvas[row][col + i] = text[i];
+        i++;
+    }
+}
