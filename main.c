@@ -26,7 +26,8 @@ int main()
         printf("9. Load Canvas\n");
         printf("10. Draw Text\n");
         printf("11. undo last action\n");
-        printf("12. Exit\n");
+        printf("12. Delete Rectangle\n");
+        printf("13. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -177,10 +178,33 @@ int main()
             break;
         }
         case 11:
-          undoLastAction();
-          displayCanvas();
-          break;
+            undoLastAction();
+            displayCanvas();
+            break;
         case 12:
+
+            printf("Enter start row: ");
+            scanf("%d", &rectStartRow);
+
+            printf("Enter start column: ");
+            scanf("%d", &rectStartCol);
+
+            printf("Enter end row: ");
+            scanf("%d", &rectEndRow);
+
+            printf("Enter end column: ");
+            scanf("%d", &rectEndCol);
+
+            deleteRectangle(
+                rectStartRow,
+                rectStartCol,
+                rectEndRow,
+                rectEndCol);
+
+            displayCanvas();
+
+            break;
+        case 13:
             printf("Exiting program...\n");
             return 0;
 

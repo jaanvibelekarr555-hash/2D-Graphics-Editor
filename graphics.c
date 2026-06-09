@@ -213,3 +213,20 @@ void undoLastAction()
 
     printf("Undo successful!\n");
 }
+void deleteRectangle(int startRow, int startCol, int endRow, int endCol)
+{
+    int i, j;
+
+    for(i = startRow; i <= endRow; i++)
+    {
+        for(j = startCol; j <= endCol; j++)
+        {
+            if(i >= 0 && i < ROWS && j >= 0 && j < COLS)
+            {
+                canvas[i][j] = ' ';
+            }
+        }
+    }
+
+    printf("Rectangle Deleted Successfully!\n");
+}

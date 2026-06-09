@@ -17,4 +17,5 @@ void loadCanvasFromFile(char filename[]);
 void drawText(int row, int col, char text[]);
 void saveState();
 void undoLastAction();
+void deleteRectangle(int startRow, int startCol, int endRow, int endCol);
 #endif
