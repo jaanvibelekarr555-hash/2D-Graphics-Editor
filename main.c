@@ -22,7 +22,8 @@ int main()
         printf("5. Draw Triangle\n");
         printf("6. Draw Circle\n");
         printf("7. Clear Canvas\n");
-        printf("8. Exit\n");
+        printf("8. Save Canvas\n");
+        printf("9. Exit\n");
         printf("Enter choice: ");
 
         if (scanf("%d", &choice) != 1)
@@ -88,6 +89,7 @@ int main()
                 rectEndCol);
 
             printf("Rectangle Drawn Successfully!\n");
+            displayCanvas();
             break;
         case 5:
 
@@ -126,6 +128,17 @@ int main()
             printf("Canvas Cleared Successfully!\n");
             break;
         case 8:
+{
+            char filename[50];
+
+            printf("Enter file name: ");
+            scanf("%s", filename);
+
+            saveCanvasToFile(filename);
+
+            break;
+}
+        case 9:
             printf("Exiting program...\n");
             return 0;
 

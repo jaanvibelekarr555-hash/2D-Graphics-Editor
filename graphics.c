@@ -129,3 +129,26 @@ void clearCanvas()
         }
     }
 }
+void saveCanvasToFile(char filename[])
+{
+    FILE *fp = fopen(filename, "w");
+
+    if(fp == NULL)
+    {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    for(int i = 0; i < ROWS; i++)
+    {
+        for(int j = 0; j < COLS; j++)
+        {
+            fputc(canvas[i][j], fp);
+        }
+        fputc('\n', fp);
+    }
+
+    fclose(fp);
+
+    printf("Canvas saved successfully!\n");
+}
