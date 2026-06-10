@@ -1,0 +1,252 @@
+MINI PROJECT: 2D GRAPHICS EDITOR IN C
+
+==================================================
+PROMPT 1
+==================================================
+
+User:
+I am a beginner in C programming. I need to develop a Mini Project called "2D Graphics Editor in C". The project should use multiple source files and should be suitable for a university mini project. Please explain the project structure, required files, functions, and implementation plan.
+
+Response:
+Suggested creating:
+- main.c
+- graphics.c
+- graphics.h
+
+Explained modular programming and project architecture. Recommended maintaining a canvas using a 2D character array and implementing drawing functions separately.
+
+==================================================
+PROMPT 2
+==================================================
+
+User:
+How can I create a canvas using a 2D character array in C? Please provide code for initializing and displaying the canvas.
+
+Response:
+Provided:
+- canvas declaration
+- initializeCanvas()
+- displayCanvas()
+
+Explained how rows and columns represent drawing space.
+
+==================================================
+PROMPT 3
+==================================================
+
+User:
+How should I organize the function declarations in graphics.h and define them in graphics.c while calling them from main.c?
+
+Response:
+Explained header files, source files, and function prototypes. Provided sample structure for graphics.h, graphics.c, and main.c.
+
+==================================================
+PROMPT 4
+==================================================
+
+User:
+I want a menu-driven interface for the graphics editor. Please provide a switch-case menu with multiple drawing options and an exit option.
+
+Response:
+Provided menu structure using while loop and switch statement. Included options for drawing and displaying shapes.
+
+==================================================
+PROMPT 5
+==================================================
+
+User:
+How can I implement a horizontal line drawing feature in the canvas? The user should enter row number and starting and ending columns.
+
+Response:
+Provided drawHorizontalLine() function. Explained input validation and updating the canvas array.
+
+==================================================
+PROMPT 6
+==================================================
+
+User:
+How can I implement vertical line drawing functionality in the graphics editor?
+
+Response:
+Provided drawVerticalLine() function using row iteration and fixed column position.
+
+==================================================
+PROMPT 7
+==================================================
+
+User:
+I want to draw rectangles on the canvas. Please provide the logic and implementation for drawing rectangle boundaries.
+
+Response:
+Provided drawRectangle() function using horizontal and vertical line logic.
+
+==================================================
+PROMPT 8
+==================================================
+
+User:
+How can I implement triangle drawing in a text-based graphics editor? The triangle should be visible using characters on the canvas.
+
+Response:
+Provided triangle drawing logic and explained coordinate-based plotting.
+
+==================================================
+PROMPT 9
+==================================================
+
+User:
+Please help me add circle drawing functionality in the editor. The circle should be represented using characters on the canvas.
+
+Response:
+Provided circle drawing algorithm using radius calculations and coordinate plotting.
+
+==================================================
+PROMPT 10
+==================================================
+
+User:
+How can I automatically refresh and display the canvas after every drawing operation?
+
+Response:
+Suggested calling displayCanvas() after each drawing function and updating the menu flow.
+
+==================================================
+PROMPT 11
+==================================================
+
+User:
+How can I prevent drawing outside the canvas boundaries and avoid invalid user input?
+
+Response:
+Provided boundary checking conditions and validation techniques.
+
+==================================================
+PROMPT 12
+==================================================
+
+User:
+I want to implement shape deletion functionality. How can I remove a drawn object or erase selected coordinates from the canvas?
+
+Response:
+Provided deleteShape() implementation and explained replacing drawing characters with blank spaces.
+
+==================================================
+PROMPT 13
+==================================================
+
+User:
+Please explain how to compile a multi-file C project using GCC in Visual Studio Code.
+
+Response:
+Provided command:
+
+gcc main.c graphics.c -o graphics_editor
+
+Explained compilation and executable generation.
+
+==================================================
+PROMPT 14
+==================================================
+
+User:
+How can I run the generated executable after compilation?
+
+Response:
+Provided commands:
+
+Windows:
+graphics_editor.exe
+
+Linux:
+./graphics_editor
+
+Explained execution process.
+
+==================================================
+PROMPT 15
+==================================================
+
+User:
+I want to maintain proper code modularity in my project. Why are graphics.c and graphics.h used instead of writing everything in one file?
+
+Response:
+Explained separation of concerns, code reuse, maintainability, and software engineering practices.
+
+==================================================
+PROMPT 16
+==================================================
+
+User:
+How can I create a GitHub repository for my mini project and connect it with my local project folder?
+
+Response:
+Provided repository creation steps and GitHub integration procedure.
+
+==================================================
+PROMPT 17
+==================================================
+
+User:
+Please provide the Git commands required to upload my project to GitHub for the first time.
+
+Response:
+Provided:
+
+git init
+git add .
+git commit -m "Initial Commit"
+git branch -M main
+git remote add origin <repository-url>
+git push -u origin main
+
+==================================================
+PROMPT 18
+==================================================
+
+User:
+How can I update my repository after adding new features to the graphics editor?
+
+Response:
+Provided:
+
+git add .
+git commit -m "Added new feature"
+git push origin main
+
+==================================================
+PROMPT 19
+==================================================
+
+User:
+How can I create a README.md file for my mini project? Please explain what sections should be included.
+
+Response:
+Suggested:
+- Project Title
+- Objective
+- Features
+- Technologies Used
+- Compilation Steps
+- Execution Steps
+- GitHub Link
+
+==================================================
+PROMPT 20
+==================================================
+
+User:
+Please explain the complete working of the 2D Graphics Editor project so that I can answer questions during project evaluation and viva.
+
+Response:
+Provided detailed explanation of:
+- Canvas representation
+- Drawing algorithms
+- Menu-driven operation
+- File structure
+- Modular programming
+- GitHub version control
+- Future enhancements
+
+==================================================
+END OF PROMPT FILE
+==================================================
